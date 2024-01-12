@@ -57,7 +57,9 @@ body {
     .opis {
         width: 95%;
     }
-
+    .datum {
+        top: 58%;
+    }
     #visualiser {
         background-size: 100% 100%;
     }
