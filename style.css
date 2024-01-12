@@ -60,6 +60,9 @@ body {
     .datum {
         top: 58%;
     }
+    #text {
+        font-size: 20px;
+    }
     #visualiser {
         background-size: 100% 100%;
     }
