@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    overflow: hidden;
+    text-align: center;
+    background-color: black;
+    min-height: 100vh;
+    overflow: auto;
+}
+
+#visualiser {
+    cursor: pointer;
+    position: relative;
+    background-image: url("slika.JPEG");
+    background-position: center;
+    text-align: center;
+    background-size: 50% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.datum {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#text {
+    font-size: 30px;
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    font-style: bold;
+    font-weight: 800;
+}
+
+.opis {
+    margin-bottom: 120px;
+    width: 50%;
+}
+
+#textopis {
+    font-family: "Inter", sans-serif;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 768px) {
+    #textopis {
+        font-size: 12px;
+    }
+
+    .opis {
+        width: 95%;
+    }
+
+    #visualiser {
+        background-size: 100% 100%;
+    }
+}
