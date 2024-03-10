@@ -1,3 +1,6 @@
+html {
+    background-color: black !important;
+}
 body {
     display: flex;
     flex-direction: column;
@@ -8,21 +11,34 @@ body {
     margin: 0;
     overflow: hidden;
     text-align: center;
-    background-color: black;
+    background-color: black !important;
+    /* background-image: url("bakcground.png"); */
+
     min-height: 100vh;
     overflow: auto;
+
+    min-height: 100vh;
 }
 
 #visualiser {
+    margin-top: 300px;
     cursor: pointer;
     position: relative;
-    background-image: url("slika.JPEG");
+    background-image: url("slika.jpg");
     background-position: center;
     text-align: center;
     background-size: 50% 100%;
     background-position: center;
     background-repeat: no-repeat;
 }
+
+/* #visualiser:nth-child(1) {
+    filter: url(#transmissionerror);
+}
+#visualiser:nth-child(2) {
+    filter: grayscale(100%) contrast(1000%);
+    mix-blend-mode: multiply;
+} */
 
 .datum {
     position: absolute;
@@ -47,6 +63,7 @@ body {
 #textopis {
     font-family: "Inter", sans-serif;
     color: #ffffff;
+    text-align: left;
 }
 
 @media screen and (max-width: 768px) {
@@ -58,12 +75,18 @@ body {
         width: 95%;
     }
     .datum {
-        top: 58%;
+        top: 50%;
     }
     #text {
         font-size: 20px;
     }
     #visualiser {
-        background-size: 100% 100%;
+        background-size: 100vh;
+        justify-content: center;
+        align-items: center;
     }
+}
+
+svg {
+    position: absolute;
 }

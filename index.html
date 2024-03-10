@@ -27,23 +27,94 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.3.0/simplex-noise.min.js"></script>
 
         <div id="visualiser">
-            <div class="datum"><p id="text">17.1.2024</p></div>
+            <div class="datum"><p id="text">20.3.2024</p></div>
         </div>
+
         <div class="opis">
             <p id="textopis">
-                HIDING (feat. altr) In case you ever thought of hiding in your
-                solace, because the room was cold, the ambience was empty, the
-                music stopped playing and the heart felt lonely. This song is
-                for you. Dedicated to all the beautiful souls that hide their
-                vibrant twin behind a facade, a face that is filled with
-                trouble. <br />
-                The verse is meant to remind you that every moment of stray
-                comes to a chorus, a resolution.<br />
+                Not so much a message about this track, but more so a
+                description and what went into the song when I was constructing
+                it. <br />
+                Finally becoming a piece, a concept of inner emotions painted
+                onto a canvas. Words from within. 'REDSPARROW', an idea with
+                distorted, robust refrains transitioning in and out with the
+                help of disoriented, disturbed and distressed tones.<br />
 
-                Listen to altr and Madison as they sing in harmony, listen to
-                their gentle sound. In all beauty, music comes from a deeper
-                place, a place where lots of us find a safe HIDING space.
+                A sequence of morphing elements which create a feeling of
+                claustrophobia, a sense of confined spaces. Drums of distress
+                keeping up the fast paced tempo of life that spin and spin and
+                spin, they don't stop spinning. <br />
+                Being inspired by the unmatched pretty of unknown, desolate and
+                contrast of dark/ bright, I built this track with an intention
+                of minimising the amount of tracks but conveying space and
+                depth. <br />
             </p>
         </div>
+        <svg>
+            <filter id="transmissionerror">
+                <feColorMatrix
+                    type="saturate"
+                    values="0"
+                    in="SourceGraphic"
+                    result="colormatrix1"
+                />
+                <feColorMatrix
+                    type="matrix"
+                    values="0.95 0 0 0 0  0 0 0 0 0  0 0 0.4 0 0  0 0 0 1 0"
+                    in="colormatrix1"
+                    result="colormatrix2"
+                />
+                <feTurbulence
+                    type="turbulence"
+                    baseFrequency="0.002 0.008"
+                    numOctaves="2"
+                    seed="5"
+                    stitchTiles="noStitch"
+                    result="turbulence"
+                >
+                    <animate
+                        attributeName="baseFrequency"
+                        from="0.002 0.008"
+                        to="0.002 0.01"
+                        dur="3500ms"
+                        repeatCount="indefinite"
+                    />
+                    <animate
+                        attributeName="numOctaves"
+                        from="1"
+                        to="10"
+                        dur="750ms"
+                        repeatCount="indefinite"
+                    />
+                    <animate
+                        attributeName="seed"
+                        from="1"
+                        to="100"
+                        dur="10s"
+                        repeatCount="indefinite"
+                    />
+                </feTurbulence>
+                <feColorMatrix
+                    type="saturate"
+                    values="30"
+                    in="turbulence"
+                    result="colormatrix3"
+                />
+                <feColorMatrix
+                    type="matrix"
+                    values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 100 -15"
+                    in="colormatrix3"
+                    result="colormatrix4"
+                />
+                <feDisplacementMap
+                    in="colormatrix2"
+                    in2="colomatrix4"
+                    scale="15"
+                    xChannelSelector="R"
+                    yChannelSelector="A"
+                    result="displacementMap"
+                />
+            </filter>
+        </svg>
     </body>
 </html>

@@ -57,14 +57,14 @@ function startVis(width, height, depth) {
     console.log("vis", width, height, depth);
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(
-        75,
+        65,
         window.innerWidth / window.innerHeight,
         0.1,
-        1000
+        98
     );
     if (isMobile()) {
         camera.position.z = 100;
-        camera.position.y = 11;
+        // camera.position.y = 6;
     } else {
         camera.position.z = 100;
     }
@@ -77,15 +77,20 @@ function startVis(width, height, depth) {
     renderer.setClearColor(0xffffff, 0);
 
     area.appendChild(renderer.domElement);
-    const geometry = new THREE.BoxGeometry(width, height, depth, 20, 20, 20);
-    const material = new THREE.MeshLambertMaterial({
-        color: "#FFFFFF",
+    const geometry = new THREE.BoxGeometry(width, height, depth, 7, 7, 7);
+    //const geometry = new THREE.TorusKnotGeometry(1, 1, 20, 10);
+    const material = new THREE.MeshStandardMaterial({
+        // color: "#FFFFFF",
+        // wireframe: true,
+        color: "#6C0000",
+        roughness: 0,
         wireframe: true,
     });
     const cube = new THREE.Mesh(geometry, material);
 
-    const light = new THREE.DirectionalLight("#ffffff", 1000);
-    light.position.set(0, 50, 100);
+    const light = new THREE.DirectionalLight("#FFFFFF", 10);
+    light.position.set(0, 1, 10000000);
+    //light.position.z = 100;
     scene.add(light);
     scene.add(cube);
 
