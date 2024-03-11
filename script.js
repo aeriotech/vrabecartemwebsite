@@ -2,7 +2,7 @@ const audioInput = document.getElementById("audio");
 let noise = new SimplexNoise();
 const area = document.getElementById("visualiser");
 
-let audio = new Audio("vrabec.mp3");
+let audio = new Audio("WebVrabecVerzija.mp3");
 
 function isMobile() {
     return window.innerWidth <= 768;
